@@ -1,0 +1,39 @@
+$a: #7c4b92;
+$back-color: yellow;
+$default-height: 1em;
+
+@mixin background-color-setter($color-name) {
+	.#{$color-name} {
+		background-color: rgba($color-name, 0.65);
+	}
+}
+
+@include background-color-setter(yellow);
+@include background-color-setter(green);
+
+.head {
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: center;
+	margin: $default-height;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0.6em;
+	border: 1px solid $a;
+}
+
+.column-icon {
+	margin-bottom: 0.5em;
+}
+
+.caps {
+	text-transform: uppercase;
+}
+
+.media-row {
+	margin-top: $default-height;
+}
